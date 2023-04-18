@@ -166,14 +166,14 @@ conv_templates = {
 
 
 def get_default_conv_template(model_name):
-    model_name = model_name.lower()
-    if "vicuna" in model_name or "output" in model_name:
-        return conv_vicuna_v1_1
-    elif "koala" in model_name:
-        return conv_koala_v1
-    elif "dolly" in model_name:
-        return conv_dolly
-    return conv_one_shot
+    # model_name = model_name.lower()
+    # if "vicuna" in model_name or "output" in model_name:
+    #     return conv_vicuna_v1_1
+    # elif "koala" in model_name:
+    #     return conv_koala_v1
+    # elif "dolly" in model_name:
+    #     return conv_dolly
+    return conv_vicuna_v1_1
 
 
 if __name__ == "__main__":
