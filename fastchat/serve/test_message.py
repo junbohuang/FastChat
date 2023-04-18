@@ -57,10 +57,10 @@ def main():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--controller-address", type=str, default="http://localhost:21001")
-    parser.add_argument("--worker-address", type=str)
-    parser.add_argument("--model-name", type=str, default="facebook/opt-350m")
-    parser.add_argument("--temperature", type=float, default=0.0)
-    parser.add_argument("--max-new-tokens", type=int, default=32)
+    parser.add_argument("--worker-address", type=str, default="http://localhost:21002")
+    parser.add_argument("--model-name", type=str, default="7B")
+    parser.add_argument("--temperature", type=float, default=0.1)
+    parser.add_argument("--max-new-tokens", type=int, default=1024)
     parser.add_argument("--message", type=str, default=
         "Tell me a story with more than 1000 words.")
     args = parser.parse_args()
