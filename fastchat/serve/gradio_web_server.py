@@ -52,7 +52,6 @@ def get_model_list():
     assert ret.status_code == 200
     ret = requests.post(controller_url + "/list_models")
     models = ret.json()["models"]
-    logger.info(f"!!!!!! Models: {models}")
     models.sort(key=lambda x: priority.get(x, x))
     logger.info(f"Models: {models}")
     return models
