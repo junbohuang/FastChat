@@ -36,7 +36,7 @@ app = fastapi.FastAPI()
 headers = {"User-Agent": "FastChat API Server"}
 
 
-@app.post("/v1/chat/completions")
+@app.post("/")
 async def create_chat_completion(request: ChatCompletionRequest):
     """Creates a completion for the chat message"""
     payload, skip_echo_len = generate_payload(
